@@ -13,6 +13,9 @@
 		2998F0BA1D2A3A5C00843381 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2998F0B81D2A3A5C00843381 /* Main.storyboard */; };
 		2998F0BC1D2A3A5C00843381 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2998F0BB1D2A3A5C00843381 /* Assets.xcassets */; };
 		2998F0BF1D2A3A5C00843381 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2998F0BD1D2A3A5C00843381 /* LaunchScreen.storyboard */; };
+		2998F0CB1D2A3CC800843381 /* GFBroswerImageCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2998F0CA1D2A3CC800843381 /* GFBroswerImageCollectionViewCell.m */; };
+		2998F0CE1D2A3FCA00843381 /* GFBroswerImageCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2998F0CD1D2A3FCA00843381 /* GFBroswerImageCollectionViewController.m */; };
+		2998F0D11D2A427300843381 /* Utility.m in Sources */ = {isa = PBXBuildFile; fileRef = 2998F0D01D2A427300843381 /* Utility.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +29,12 @@
 		2998F0BB1D2A3A5C00843381 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2998F0BE1D2A3A5C00843381 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2998F0C01D2A3A5C00843381 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2998F0C91D2A3CC800843381 /* GFBroswerImageCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GFBroswerImageCollectionViewCell.h; sourceTree = "<group>"; };
+		2998F0CA1D2A3CC800843381 /* GFBroswerImageCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GFBroswerImageCollectionViewCell.m; sourceTree = "<group>"; };
+		2998F0CC1D2A3FCA00843381 /* GFBroswerImageCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GFBroswerImageCollectionViewController.h; sourceTree = "<group>"; };
+		2998F0CD1D2A3FCA00843381 /* GFBroswerImageCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GFBroswerImageCollectionViewController.m; sourceTree = "<group>"; };
+		2998F0CF1D2A427300843381 /* Utility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Utility.h; sourceTree = "<group>"; };
+		2998F0D01D2A427300843381 /* Utility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Utility.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +71,12 @@
 				2998F0B31D2A3A5C00843381 /* AppDelegate.m */,
 				2998F0B51D2A3A5C00843381 /* ViewController.h */,
 				2998F0B61D2A3A5C00843381 /* ViewController.m */,
+				2998F0CC1D2A3FCA00843381 /* GFBroswerImageCollectionViewController.h */,
+				2998F0CD1D2A3FCA00843381 /* GFBroswerImageCollectionViewController.m */,
+				2998F0C91D2A3CC800843381 /* GFBroswerImageCollectionViewCell.h */,
+				2998F0CA1D2A3CC800843381 /* GFBroswerImageCollectionViewCell.m */,
+				2998F0CF1D2A427300843381 /* Utility.h */,
+				2998F0D01D2A427300843381 /* Utility.m */,
 				2998F0B81D2A3A5C00843381 /* Main.storyboard */,
 				2998F0BB1D2A3A5C00843381 /* Assets.xcassets */,
 				2998F0BD1D2A3A5C00843381 /* LaunchScreen.storyboard */,
@@ -149,8 +164,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2998F0CB1D2A3CC800843381 /* GFBroswerImageCollectionViewCell.m in Sources */,
+				2998F0CE1D2A3FCA00843381 /* GFBroswerImageCollectionViewController.m in Sources */,
 				2998F0B71D2A3A5C00843381 /* ViewController.m in Sources */,
 				2998F0B41D2A3A5C00843381 /* AppDelegate.m in Sources */,
+				2998F0D11D2A427300843381 /* Utility.m in Sources */,
 				2998F0B11D2A3A5C00843381 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -264,6 +282,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = GFBroswerImageOCDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.lzq.GFBroswerImageOCDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -275,6 +294,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = GFBroswerImageOCDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.lzq.GFBroswerImageOCDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -300,6 +320,7 @@
 				2998F0C51D2A3A5C00843381 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
