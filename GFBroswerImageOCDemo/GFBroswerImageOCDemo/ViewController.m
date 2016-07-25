@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "GFBroswerImageCollectionViewController.h"
 
 @interface ViewController ()
 
@@ -18,7 +19,21 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     
-    self.view.backgroundColor = [UIColor redColor];
+    self.navigationItem.title = @"图片浏览";
+    self.view.backgroundColor = [UIColor whiteColor];
+    
+    UIButton *testBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+    testBtn.frame = CGRectMake(100, 100, 100, 40);
+    testBtn.backgroundColor = [UIColor grayColor];
+    [testBtn setTitle:@"测试" forState:UIControlStateNormal];
+    [testBtn addTarget:self action:@selector(testButtonEvent:) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:testBtn];
+}
+
+- (void)testButtonEvent:(id)sender{
+    GFBroswerImageCollectionViewController *broswerVC = [[GFBroswerImageCollectionViewController alloc] init];
+//    [self presentViewController:broswerVC animated:YES completion:nil];
+    [self.navigationController pushViewController:broswerVC animated:YES];
 }
 
 - (void)didReceiveMemoryWarning {

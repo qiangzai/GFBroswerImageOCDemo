@@ -14,14 +14,16 @@
 @end
 
 @implementation GFBroswerImageCollectionViewController
+
 static NSString * const reuseIdentifier = @"Cell";
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     UICollectionViewFlowLayout *flowLayout = [[UICollectionViewFlowLayout alloc] init];
     flowLayout.itemSize = CGSizeMake(self.view.frame.size.width, self.view.frame.size.height - 64);
     flowLayout.scrollDirection = UICollectionViewScrollDirectionHorizontal;
-    self.imgCollectionView = [[UICollectionView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height - 64) collectionViewLayout:flowLayout];
+    self.imgCollectionView = [[UICollectionView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height) collectionViewLayout:flowLayout];
     [self.imgCollectionView registerClass:[GFBroswerImageCollectionViewCell class] forCellWithReuseIdentifier:reuseIdentifier];
     self.imgCollectionView.pagingEnabled = YES;
     self.imgCollectionView.directionalLockEnabled = YES;
@@ -32,6 +34,11 @@ static NSString * const reuseIdentifier = @"Cell";
 //    [self.imgCollectionView setContentOffset:CGPointMake(kScreenWidth * self.page, 0) animated:YES];
     [self.view addSubview:self.imgCollectionView];
 }
+
+- (void)singleTap{
+    
+}
+
 
 - (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView{
     return 1;
@@ -47,7 +54,10 @@ static NSString * const reuseIdentifier = @"Cell";
         cell = [[GFBroswerImageCollectionViewCell alloc] init];
     }
     cell.delegate = self;
-    cell.dataImgView.image = nil;
+//    cell.dataImgView.image = nil;
+    
+    cell.dataImgView.image = [UIImage imageNamed:@"imageDemo"];
+    
 //    if (self.isUrl) {
 //        [cell showImageViewWithUrl:self.imgArr[indexPath.row]];
 //    }else{

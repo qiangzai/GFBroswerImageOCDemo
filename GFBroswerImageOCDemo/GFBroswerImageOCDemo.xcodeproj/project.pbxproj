@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		29761A131D45AAD700A5129B /* imageDemo.png in Resources */ = {isa = PBXBuildFile; fileRef = 29761A121D45AAD700A5129B /* imageDemo.png */; };
 		2998F0B11D2A3A5C00843381 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2998F0B01D2A3A5C00843381 /* main.m */; };
 		2998F0B41D2A3A5C00843381 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2998F0B31D2A3A5C00843381 /* AppDelegate.m */; };
 		2998F0B71D2A3A5C00843381 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2998F0B61D2A3A5C00843381 /* ViewController.m */; };
@@ -19,6 +20,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		29761A121D45AAD700A5129B /* imageDemo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = imageDemo.png; sourceTree = "<group>"; };
 		2998F0AC1D2A3A5C00843381 /* GFBroswerImageOCDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GFBroswerImageOCDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2998F0B01D2A3A5C00843381 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		2998F0B21D2A3A5C00843381 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -77,6 +79,7 @@
 				2998F0CA1D2A3CC800843381 /* GFBroswerImageCollectionViewCell.m */,
 				2998F0CF1D2A427300843381 /* Utility.h */,
 				2998F0D01D2A427300843381 /* Utility.m */,
+				29761A121D45AAD700A5129B /* imageDemo.png */,
 				2998F0B81D2A3A5C00843381 /* Main.storyboard */,
 				2998F0BB1D2A3A5C00843381 /* Assets.xcassets */,
 				2998F0BD1D2A3A5C00843381 /* LaunchScreen.storyboard */,
@@ -151,6 +154,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				29761A131D45AAD700A5129B /* imageDemo.png in Resources */,
 				2998F0BF1D2A3A5C00843381 /* LaunchScreen.storyboard in Resources */,
 				2998F0BC1D2A3A5C00843381 /* Assets.xcassets in Resources */,
 				2998F0BA1D2A3A5C00843381 /* Main.storyboard in Resources */,
