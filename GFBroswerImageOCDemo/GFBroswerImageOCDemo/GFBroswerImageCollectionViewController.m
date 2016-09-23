@@ -35,7 +35,7 @@ static NSString * const reuseIdentifier = @"Cell";
     self.imgCollectionView.backgroundColor = [UIColor whiteColor];
     self.imgCollectionView.showsHorizontalScrollIndicator = NO;
 //    [self.imgCollectionView setContentOffset:CGPointMake(kScreenWidth * self.page, 0) animated:YES];
-    [self.imgCollectionView setContentSize:CGSizeMake(kScreenWidth, kScreenContent * 10)];
+    [self.imgCollectionView setContentSize:CGSizeMake(kScreenWidth * 10, kScreenContent)];
     [self.view addSubview:self.imgCollectionView];
 }
 
