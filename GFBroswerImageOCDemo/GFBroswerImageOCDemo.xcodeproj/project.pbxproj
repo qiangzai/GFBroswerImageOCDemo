@@ -128,6 +128,7 @@
 				TargetAttributes = {
 					2998F0AB1D2A3A5C00843381 = {
 						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = T97J2352DH;
 					};
 				};
 			};
@@ -285,6 +286,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = T97J2352DH;
 				INFOPLIST_FILE = GFBroswerImageOCDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -297,6 +299,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = T97J2352DH;
 				INFOPLIST_FILE = GFBroswerImageOCDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

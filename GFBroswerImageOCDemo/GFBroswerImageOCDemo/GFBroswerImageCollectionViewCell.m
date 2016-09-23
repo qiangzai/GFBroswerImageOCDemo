@@ -55,8 +55,15 @@
 }
 
 - (void)showImageViewWithImage:(UIImage *)img{
+    self.dataScrView.zoomScale = 1;
     self.dataImgView.image = img;
 }
+
+//- (void)setDataImgView:(UIImageView *)dataImgView
+//{
+//    self.dataScrView.zoomScale = 1;
+//    self.dataImgView = dataImgView;
+//}
 
 #pragma mark - UIScrollViewDelegate
 - (UIView *)viewForZoomingInScrollView:(UIScrollView *)scrollView{
@@ -105,17 +112,17 @@
         _dataImgView = [[UIImageView alloc] init];
         _dataImgView.userInteractionEnabled = YES;
         _dataImgView.contentMode = UIViewContentModeScaleAspectFit;
-        UITapGestureRecognizer *singleTapGes = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(singleTapGesture:)];
-        singleTapGes.numberOfTapsRequired = 1;
-        singleTapGes.numberOfTouchesRequired = 1;
-        [_dataImgView addGestureRecognizer:singleTapGes];
-        
-        UITapGestureRecognizer *doubleTapGes = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(doubleTapGesture:)];
-        doubleTapGes.numberOfTouchesRequired = 1;
-        doubleTapGes.numberOfTapsRequired = 2;
-        [_dataImgView addGestureRecognizer:doubleTapGes];
-        
-        [singleTapGes requireGestureRecognizerToFail:doubleTapGes];
+//        UITapGestureRecognizer *singleTapGes = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(singleTapGesture:)];
+//        singleTapGes.numberOfTapsRequired = 1;
+//        singleTapGes.numberOfTouchesRequired = 1;
+//        [_dataImgView addGestureRecognizer:singleTapGes];
+//        
+//        UITapGestureRecognizer *doubleTapGes = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(doubleTapGesture:)];
+//        doubleTapGes.numberOfTouchesRequired = 1;
+//        doubleTapGes.numberOfTapsRequired = 2;
+//        [_dataImgView addGestureRecognizer:doubleTapGes];
+//        
+//        [singleTapGes requireGestureRecognizerToFail:doubleTapGes];
         
     }
     return _dataImgView;

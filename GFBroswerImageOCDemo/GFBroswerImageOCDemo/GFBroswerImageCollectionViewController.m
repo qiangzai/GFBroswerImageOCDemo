@@ -23,6 +23,9 @@ static NSString * const reuseIdentifier = @"Cell";
     UICollectionViewFlowLayout *flowLayout = [[UICollectionViewFlowLayout alloc] init];
     flowLayout.itemSize = CGSizeMake(self.view.frame.size.width, self.view.frame.size.height - 64);
     flowLayout.scrollDirection = UICollectionViewScrollDirectionHorizontal;
+//    flowLayout.minimumLineSpacing = 0;
+//    flowLayout.minimumInteritemSpacing = 0;
+    
     self.imgCollectionView = [[UICollectionView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height) collectionViewLayout:flowLayout];
     [self.imgCollectionView registerClass:[GFBroswerImageCollectionViewCell class] forCellWithReuseIdentifier:reuseIdentifier];
     self.imgCollectionView.pagingEnabled = YES;
@@ -32,11 +35,12 @@ static NSString * const reuseIdentifier = @"Cell";
     self.imgCollectionView.backgroundColor = [UIColor whiteColor];
     self.imgCollectionView.showsHorizontalScrollIndicator = NO;
 //    [self.imgCollectionView setContentOffset:CGPointMake(kScreenWidth * self.page, 0) animated:YES];
+    [self.imgCollectionView setContentSize:CGSizeMake(kScreenWidth, kScreenContent * 10)];
     [self.view addSubview:self.imgCollectionView];
 }
 
 - (void)singleTap{
-    
+    NSLog(@"singletap");
 }
 
 
@@ -49,14 +53,21 @@ static NSString * const reuseIdentifier = @"Cell";
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
+    
     GFBroswerImageCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:reuseIdentifier forIndexPath:indexPath];
-    if (cell == nil) {
-        cell = [[GFBroswerImageCollectionViewCell alloc] init];
-    }
-    cell.delegate = self;
+    
+//    if (cell == nil) {
+//        cell = [[GFBroswerImageCollectionViewCell alloc] init];
+//    }
+    
+//    cell.delegate = self;
 //    cell.dataImgView.image = nil;
     
-    cell.dataImgView.image = [UIImage imageNamed:@"imageDemo"];
+//    cell.dataImgView.image = [UIImage imageNamed:@"imageDemo"];
+    
+    
+    [cell showImageViewWithImage:[UIImage imageNamed:@"imageDemo"]];
+    
     
 //    if (self.isUrl) {
 //        [cell showImageViewWithUrl:self.imgArr[indexPath.row]];
@@ -66,6 +77,14 @@ static NSString * const reuseIdentifier = @"Cell";
     
     
     return cell;
+}
+
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView
+{
+    CGFloat offsetY = scrollView.contentOffset.x;
+    int index = offsetY / kScreenWidth + 1;
+//    NSLog(@"this is %i page",index);
+    self.navigationItem.title = [NSString stringWithFormat:@"第%i页",index];
 }
 
 - (CGFloat)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout minimumLineSpacingForSectionAtIndex:(NSInteger)section{
